@@ -1,0 +1,13 @@
+import asyncio
+from AsyncMyAPIWrapper import AsyncMyAPIWrapper
+
+async def main():
+    api_wrapper = AsyncMyAPIWrapper(api_key="YOUR_API_KEY")
+    
+    
+    user_info = await api_wrapper.get_userinfo(user_id=123456789)
+    
+   
+    print(user_info.username)  
+
+asyncio.run(main())
